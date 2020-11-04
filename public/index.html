@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
 
   <title>Budget Tracker</title>
 </head>
+
 <body>
   <div class="wrapper">
     <div class="total">
@@ -34,46 +36,51 @@
           <th>Amount</th>
         </thead>
         <tbody id="tbody">
-          
+
         </tbody>
       </table>
     </div>
-    
+
     <canvas id="myChart"></canvas>
   </div>
 
 
-</script>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="index.js"></script>
-  <script> 
-    
-          if ("serviceWorker" in navigator) {
-            window.addEventListener("load", () => {
-              navigator.serviceWorker.register("service-worker.js")
-                .then(reg => {
-                  console.log("We found your service worker file!", reg);
-                });
-            });
-          }
+  <script>
+
+    const indexedDB =
+      window.indexedDB ||
+      window.mozIndexedDB ||
+      window.webkitIndexedDB ||
+      window.msIndexedDB ||
+      window.shimIndexedDB;
 
 
+    const request = indexedDB.open("budget", 1);
 
-        </script>
+    request.onupgradeneeded = ({ target }) => {
+      const db = target.result;
+      const objectStore = db.createObjectStore("transaction", { keyPath: "id" });
+    };
+
+    request.onsuccess = function (event) {
+      console.log(request.result);
+
+    };
+
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("service-worker.js")
+          .then(reg => {
+            console.log("We found your service worker file!", reg);
+          });
+      });
+    }
+
+
+  </script>
 </body>
+
 </html>
-
-<script>
-const request = window.indexDB.open("budget", 1);
-
-request.onsuccess = function(event) {
-  console.log("Success creating/accessing IndexedDB database");
-  db= request.result;
-
-  db.onerror = function(event) {
-    console.log("Error creating/accessing IndexedDB database");
-  }
-};
-
-</script>

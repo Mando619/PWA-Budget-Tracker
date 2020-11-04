@@ -10,25 +10,11 @@ mongoose.connect("mongodb://localhost/budget", {
 
 let budgetTrackerSeed = [
     {
-        name: "car insurance",
-        value: 250,
+        name: "Pay Check",
+        value: 2500,
         date: new Date().setDate(new Date().getDate()-9)
     }
 ]
-//     {
-    
-//         name: "Car Insurance",
-//     },
-//     {
-//         value: 250,
-//     },
-//     {
-//         date: Date
-//     },
-// ]
-
-
-
 
 db.Transaction.deleteMany({})
   .then(() => db.Transaction.collection.insertMany(budgetTrackerSeed))
