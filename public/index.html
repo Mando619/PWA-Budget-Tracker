@@ -47,28 +47,9 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-  <script src="index.js"></script>
+  <script src="/index.js"></script>
+  <script src ="/db.js"></script>
   <script>
-
-    const indexedDB =
-      window.indexedDB ||
-      window.mozIndexedDB ||
-      window.webkitIndexedDB ||
-      window.msIndexedDB ||
-      window.shimIndexedDB;
-
-
-    const request = indexedDB.open("budget", 1);
-
-    request.onupgradeneeded = ({ target }) => {
-      const db = target.result;
-      const objectStore = db.createObjectStore("transaction", { keyPath: "id" });
-    };
-
-    request.onsuccess = function (event) {
-      console.log(request.result);
-
-    };
 
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => {
