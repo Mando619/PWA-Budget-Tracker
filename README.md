@@ -4,7 +4,7 @@
 
 ## Description
 
-
+PWA-Budget-Tracker is an application used for tracking and storing your day to day transactions. It is also able to track while offline, using indexdb. When back online, the transactions will be recording to your last time of usage. As a PWA, Progress Web App, its intention is to work on any platform that usesa standard compliant browser, including both desktop and mobile devices. Through your mobile phone, you're able to add to your homescreen, and use whenever. 
 
 ## DEMO 
 
@@ -20,7 +20,8 @@ No installation needed.
 
 ## Technologies Used
 
-* [IndexDB- ]
+* [Indexed Database- Is a javascript application programming interface provided by web browsers
+    for managing a NoSQL database of JSON objects. This was used to be implemented on to your mobile devices.]
 * [Morgan- Request logger middleware for Node.js. It helps with the logging requests to the application.]
 * [Mongoose- Object Data Modeling(ODM) library that provides a modeling enviornment for the data. A
     cross platform web server with functions that help with HTTP client + server,and other. ]
@@ -30,7 +31,12 @@ No installation needed.
 * [Node.js- Used for executing JavaScript coding to build a CLI for server-side scripting]
 * [JavaScript- Code that gives functionality of functions for implementing code in this application]
 
+## Credits
 
+Study group
+
+* [Plover Brown](https://github.com/rebgrasshopper)
+* [Johnny Lieu](https://github.com/johnnylieu)
 
 ## Questions 
 
