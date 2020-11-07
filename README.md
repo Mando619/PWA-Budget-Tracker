@@ -8,9 +8,10 @@
 
 ## DEMO 
 
+![2020-11-06](https://user-images.githubusercontent.com/65925169/98406096-37148280-2022-11eb-9d10-fc7aabb1f85e.png)
 
 
-[Link to deployed application]()
+[Link to deployed application](https://mighty-badlands-72894.herokuapp.com/)
 
 
 ## Installation 
@@ -19,6 +20,7 @@ No installation needed.
 
 ## Technologies Used
 
+* [IndexDB- ]
 * [Morgan- Request logger middleware for Node.js. It helps with the logging requests to the application.]
 * [Mongoose- Object Data Modeling(ODM) library that provides a modeling enviornment for the data. A
     cross platform web server with functions that help with HTTP client + server,and other. ]
